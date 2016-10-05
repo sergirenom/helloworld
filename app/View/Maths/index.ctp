@@ -9,7 +9,7 @@
 </form>
 <br>
 <?php
-  if ($this->request->is('post') and is_numeric($sum1) and is_numeric($sum2)) {
+  if (isset($result)) {
     echo "<h1>" . $sum1 . " + " . $sum2 . " = " . $result . '</h1>';
   }
 ?>
