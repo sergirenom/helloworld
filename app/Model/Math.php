@@ -1,6 +1,8 @@
 <?php
   class Math extends AppModel {
 
+    var $name = 'Math';
+    
     public $validate = array(
       'summand' => array(
         'notEmpty' => array(
