@@ -7,3 +7,9 @@
   <input type="text" name="summand2" /><br><br>
   <input  type="submit" name="button" value="SUM">
 </form>
+<br>
+<?php
+  if ($this->request->is('post') and is_numeric($sum1) and is_numeric($sum2)) {
+    echo "<h1>" . $sum1 . " + " . $sum2 . " = " . $result . '</h1>';
+  }
+?>
