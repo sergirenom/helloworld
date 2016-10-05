@@ -1,18 +1,11 @@
 <?php
   class Math extends AppModel {
 
-    public $validate = array(
-      'summand' => array(
-        'notEmpty' => array(
-          'rule' => 'notBlank',
-          'message' => 'Fill the field'
-        ),
-        'numeric' => array(
-          'rule' => 'numeric',
-          'message' => 'Only numbers'
-        )
-      )
-    );
+    var $name = 'Math';
+
+    public function sum($sum1, $sum2) {
+      return $sum1 + $sum2;
+    }
 
   }
 ?>
