@@ -1,4 +1,5 @@
 <?php
+  App::uses('AppController', 'Controller');
   class MathsController extends AppController {
 
     public function index() {
@@ -11,14 +12,18 @@
               $this->set('sum1', $sum1);
               $this->set('sum2', $sum2);
 
-              if (is_numeric($sum1) and is_numeric($sum2)) {
-                $result =  $this->Math->sum($sum1, $sum2);
-                //$this->Flash->success("The total value is: ".$result);
-                $this->set('result', $result);
-              } else {
-                $this->Flash->success('Some summand is not a number');
-              }
+              $this->sum($sum1, $sum2);
           }
+    }
+
+    function sum($sum1, $sum2) {
+      if (is_numeric($sum2)) {
+        $result =  $this->Math->sum($sum1, $sum2);
+        //$this->Flash->success("The total value is: ".$result);
+        $this->set('result', $result);
+      } else {
+        $this->Flash->success('Some summand is not a number');
       }
+    }
   }
 ?>

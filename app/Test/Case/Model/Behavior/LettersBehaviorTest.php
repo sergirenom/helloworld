@@ -9,7 +9,7 @@ class LettersBehaviorTest extends CakeTestCase {
   }
 
   public function testSum() {
-    $result = $this->Math->sum('fdkj', 5);
+    $result = $this->Math->sum('4', 5);
     $expected = 9;
     $this->assertEquals($expected, $result);
   }
