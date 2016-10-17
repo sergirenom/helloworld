@@ -6,11 +6,13 @@ class LettersBehaviorTest extends ControllerTestCase {
   public function testIndex() {
     $result = $this->testAction('/maths/index');
     debug($result);
+    parent::tearDown();
   }
 
   public function testSum() {
     $result = $this->testAction('/maths/sum/2/-4');
     debug($result);
+    parent::tearDown();
   }
 
 }

@@ -13,6 +13,7 @@ class LettersBehaviorTest extends CakeTestCase {
     $expected = 1;
     $this->assertEquals($expected, $result);
     debug($result);
+    parent::tearDown();
   }
 
   public function testLetters() {
@@ -20,6 +21,7 @@ class LettersBehaviorTest extends CakeTestCase {
     $expected = 0;
     $this->assertEquals($expected, $result);
     debug($result);
+    parent::tearDown();
   }
 }
 ?>
