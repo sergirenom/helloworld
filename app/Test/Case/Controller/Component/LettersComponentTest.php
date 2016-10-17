@@ -9,7 +9,7 @@ class LettersBehaviorTest extends ControllerTestCase {
   }
 
   public function testSum() {
-    $result = $this->testAction('/maths/maths/2/4');
+    $result = $this->testAction('/maths/sum/2/-4');
     debug($result);
   }
 
