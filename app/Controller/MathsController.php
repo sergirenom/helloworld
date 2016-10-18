@@ -7,6 +7,7 @@
           if($this->request->is('post'))
           {
               if ($this->request->data) {
+                var_dump($this->request->data);
                 $sum1 = $this->request->data['summand1'];
                 $sum2 = $this->request->data['summand2'];
 
