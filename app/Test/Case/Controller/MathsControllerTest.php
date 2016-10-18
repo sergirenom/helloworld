@@ -1,23 +1,28 @@
 <?php
 App::uses('MathsController', 'Controller');
 class MathsControllerTest extends ControllerTestCase {
-  //public $fixtures = array('app.math');
-  /*public function testIndex() {
-    $result = $this->testAction('/maths/index');
-    debug($result);
-  }*/
-  //public $fixtures = array('app.math');
-  public function testIndex() {
+  public function testNumbers() {
+    $sum1 = 1;
+    $sum2 = -22;
     $data = array(
-    //  'Math' => array(
-        'summand1' => 1,
-        'summand2' => -22
-  //    )
+        'summand1' => $sum1,
+        'summand2' => $sum2
     );
     $result = $this->testAction('/maths/index', array('return' => 'vars', 'fixturize' => true, 'data'=> $data, 'method' => 'post')); // Act
     debug($result);
     $this->assertEquals(-21, $result['result']); // Assert
-    //debug($result);
+  }
+
+  public function testLetters() {
+    $sum1 = 'Hey';
+    $sum2 = 'Ho';
+    $data = array(
+        'summand1' => $sum1,
+        'summand2' => $sum2
+    );
+    $result = $this->testAction('/maths/index', array('return' => 'vars', 'fixturize' => true, 'data'=> $data, 'method' => 'post')); // Act
+    debug($result);
+    $this->assertEquals('Summands are not numric', $result['error']); // Assert
   }
 }
 ?>

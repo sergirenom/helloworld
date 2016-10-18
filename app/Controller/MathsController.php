@@ -3,11 +3,10 @@
   class MathsController extends AppController {
 
     public function index() {
-
           if($this->request->is('post'))
           {
               if ($this->request->data) {
-                var_dump($this->request->data);
+                //var_dump($this->request->data);
                 $sum1 = $this->request->data['summand1'];
                 $sum2 = $this->request->data['summand2'];
 
@@ -25,6 +24,7 @@
         //$this->Flash->success("The total value is: ".$result);
         $this->set('result', $result);
       } else {
+        $this->set('error', 'Summands are not numric');
         $this->Flash->success('Some summand is not a number');
       }
     }
